@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 
-export default function Home() {
+const Buttons = () => {
   return (
     <div className="p-4 flex flex-col gap-4 max-w-[250px]">
       <Button>Default</Button>
@@ -17,4 +17,6 @@ export default function Home() {
       <Button variant="sidebarOutline">Sidebar Outline</Button>
     </div>
   );
-}
+};
+
+export default Buttons;
