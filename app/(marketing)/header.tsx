@@ -6,7 +6,6 @@ import {
   SignedOut,
   SignInButton,
   UserButton,
-  SignOutButton,
 } from "@clerk/nextjs";
 import { Loader } from "lucide-react";
 import Image from "next/image";
@@ -21,13 +20,17 @@ export const Header = () => {
             Lingo
           </h1>
         </div>
+        {/* Show a loader while Clerk is loading */}
         <ClerkLoading>
           <Loader className="h-5 w-5 text-muted-foreground animate-spin" />
         </ClerkLoading>
+        {/* Show Auth components after Clerk has been loaded */}
         <ClerkLoaded>
+          {/* Show User Detail button if signed in */}
           <SignedIn>
-            <UserButton />
+            <UserButton afterSignOutUrl="/" />
           </SignedIn>
+          {/* If user is signed out, show Login button */}
           <SignedOut>
             <SignInButton
               mode="modal"
