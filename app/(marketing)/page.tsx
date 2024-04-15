@@ -30,20 +30,12 @@ export default function Home() {
           <ClerkLoaded>
             {/* Show SignIn and SignUp buttons if the user hasn't signed in yet */}
             <SignedOut>
-              <SignUpButton
-                mode="modal"
-                afterSignInUrl="/learn"
-                afterSignUpUrl="/learn"
-              >
+              <SignUpButton mode="modal" afterSignInUrl="/" afterSignUpUrl="/">
                 <Button size="lg" variant="secondary" className="w-full">
                   Get Starter
                 </Button>
               </SignUpButton>
-              <SignInButton
-                mode="modal"
-                afterSignInUrl="/learn"
-                afterSignUpUrl="/learn"
-              >
+              <SignInButton mode="modal" afterSignInUrl="/" afterSignUpUrl="/">
                 <Button size="lg" variant="primaryOutline" className="w-full">
                   I already have an account
                 </Button>
@@ -52,7 +44,7 @@ export default function Home() {
             {/* Show button to Learning page if the user is already signed in */}
             <SignedIn>
               <Button size="lg" variant="secondary" className="w-full" asChild>
-                <Link href="/learn">Continue Learning</Link>
+                <Link href="/">Continue Learning</Link>
               </Button>
             </SignedIn>
           </ClerkLoaded>
