@@ -32,7 +32,11 @@ export const Header = () => {
           </SignedIn>
           {/* If user is signed out, show Login button */}
           <SignedOut>
-            <SignInButton mode="modal" afterSignInUrl="/" afterSignUpUrl="/">
+            <SignInButton
+              mode="modal"
+              afterSignInUrl="/learn"
+              afterSignUpUrl="/learn"
+            >
               <Button size="lg" variant="ghost">
                 Login
               </Button>
